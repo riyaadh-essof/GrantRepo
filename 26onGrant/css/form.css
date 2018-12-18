@@ -1,0 +1,16 @@
+﻿.form-input-icon {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    position: absolute;
+    left: 12px;
+    top: 34px;
+    color: #ccc;
+    width: 25px;
+    height: 25px;
+    display: block;
+    font-weight: 400 !important;
+}
+
+.form-align {
+    padding-left: 40px;
+}

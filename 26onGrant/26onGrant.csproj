@@ -1,0 +1,1840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{765E6746-02B6-49D0-B9A9-60383CBE1D06}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_26onGrant</RootNamespace>
+    <AssemblyName>26onGrant</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="26onGrantService.svc" />
+    <Content Include="admin_section\add-listing.html" />
+    <Content Include="admin_section\bookings.html" />
+    <Content Include="admin_section\bookmarks.html" />
+    <Content Include="admin_section\charts.html" />
+    <Content Include="admin_section\css\admin.css" />
+    <Content Include="admin_section\css\custom.css" />
+    <Content Include="admin_section\css\date_picker.css" />
+    <Content Include="admin_section\img\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="admin_section\img\apple-touch-icon-144x144-precomposed.png" />
+    <Content Include="admin_section\img\apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="admin_section\img\apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="admin_section\img\arrow_down.svg" />
+    <Content Include="admin_section\img\avatar1.jpg" />
+    <Content Include="admin_section\img\avatar2.jpg" />
+    <Content Include="admin_section\img\avatar3.jpg" />
+    <Content Include="admin_section\img\avatar4.jpg" />
+    <Content Include="admin_section\img\avatar5.jpg" />
+    <Content Include="admin_section\img\avatar6.jpg" />
+    <Content Include="admin_section\img\favicon.ico" />
+    <Content Include="admin_section\img\item_1.jpg" />
+    <Content Include="admin_section\img\item_2.jpg" />
+    <Content Include="admin_section\img\item_3.jpg" />
+    <Content Include="admin_section\img\logo.png" />
+    <Content Include="admin_section\index.html" />
+    <Content Include="admin_section\js\admin-charts-all.js" />
+    <Content Include="admin_section\js\admin-charts.js" />
+    <Content Include="admin_section\js\admin-datatables.js" />
+    <Content Include="admin_section\js\admin.js" />
+    <Content Include="admin_section\listings.html" />
+    <Content Include="admin_section\login.html" />
+    <Content Include="admin_section\messages.html" />
+    <Content Include="admin_section\reviews.html" />
+    <Content Include="admin_section\tables.html" />
+    <Content Include="admin_section\user-profile.html" />
+    <Content Include="admin_section\vendor\animate.min.css" />
+    <Content Include="admin_section\vendor\bootstrap-datepicker.js" />
+    <Content Include="admin_section\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="admin_section\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="admin_section\vendor\chart.js\Chart.js" />
+    <Content Include="admin_section\vendor\chart.js\Chart.min.js" />
+    <Content Include="admin_section\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="admin_section\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="admin_section\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="admin_section\vendor\dropzone.css" />
+    <Content Include="admin_section\vendor\dropzone.min.js" />
+    <Content Include="admin_section\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="admin_section\vendor\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="admin_section\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="admin_section\vendor\jquery.magnific-popup.min.js" />
+    <Content Include="admin_section\vendor\jquery.selectbox-0.2.js" />
+    <Content Include="admin_section\vendor\jquery\jquery.min.js" />
+    <Content Include="admin_section\vendor\magnific-popup.css" />
+    <Content Include="admin_section\vendor\retina-replace.min.js" />
+    <Content Include="assets\validate.js" />
+    <Content Include="boardroomrental.aspx" />
+    <Content Include="cart.aspx" />
+    <Content Include="codebase\connector\base_connector.php" />
+    <Content Include="codebase\connector\chart_connector.php" />
+    <Content Include="codebase\connector\combo_connector.php" />
+    <Content Include="codebase\connector\convert.php" />
+    <Content Include="codebase\connector\crosslink_connector.php" />
+    <Content Include="codebase\connector\dataprocessor.php" />
+    <Content Include="codebase\connector\dataview_connector.php" />
+    <Content Include="codebase\connector\data_connector.php" />
+    <Content Include="codebase\connector\db_adodb.php" />
+    <Content Include="codebase\connector\db_common.php" />
+    <Content Include="codebase\connector\db_excel.php" />
+    <Content Include="codebase\connector\db_filesystem.php" />
+    <Content Include="codebase\connector\db_mssql.php" />
+    <Content Include="codebase\connector\db_mysql.php" />
+    <Content Include="codebase\connector\db_mysqli.php" />
+    <Content Include="codebase\connector\db_oracle.php" />
+    <Content Include="codebase\connector\db_pdo.php" />
+    <Content Include="codebase\connector\db_phpcake.php" />
+    <Content Include="codebase\connector\db_phpcake2.php" />
+    <Content Include="codebase\connector\db_phpci.php" />
+    <Content Include="codebase\connector\db_phpci2.php" />
+    <Content Include="codebase\connector\db_phpyii.php" />
+    <Content Include="codebase\connector\db_phpyii1.php" />
+    <Content Include="codebase\connector\db_postgre.php" />
+    <Content Include="codebase\connector\db_sasql.php" />
+    <Content Include="codebase\connector\db_sqlite.php" />
+    <Content Include="codebase\connector\db_sqlite3.php" />
+    <Content Include="codebase\connector\db_sqlsrv.php" />
+    <Content Include="codebase\connector\filesystem_item.php" />
+    <Content Include="codebase\connector\form_connector.php" />
+    <Content Include="codebase\connector\gantt_connector.php" />
+    <Content Include="codebase\connector\grid_config.php" />
+    <Content Include="codebase\connector\grid_connector.php" />
+    <Content Include="codebase\connector\keygrid_connector.php" />
+    <Content Include="codebase\connector\mixed_connector.php" />
+    <Content Include="codebase\connector\options_connector.php" />
+    <Content Include="codebase\connector\scheduler_connector.php" />
+    <Content Include="codebase\connector\strategy.php" />
+    <Content Include="codebase\connector\tools.php" />
+    <Content Include="codebase\connector\treedatagroup_connector.php" />
+    <Content Include="codebase\connector\treedatamultitable_connector.php" />
+    <Content Include="codebase\connector\treegridgroup_connector.php" />
+    <Content Include="codebase\connector\treegridmultitable_connector.php" />
+    <Content Include="codebase\connector\treegrid_connector.php" />
+    <Content Include="codebase\connector\treegroup_connector.php" />
+    <Content Include="codebase\connector\treemultitable_connector.php" />
+    <Content Include="codebase\connector\tree_connector.php" />
+    <Content Include="codebase\connector\update.php" />
+    <Content Include="codebase\connector\xss_filter.php" />
+    <Content Include="codebase\dhtmlxscheduler.css" />
+    <Content Include="codebase\dhtmlxscheduler.js" />
+    <Content Include="codebase\dhtmlxscheduler_contrast_black.css" />
+    <Content Include="codebase\dhtmlxscheduler_contrast_white.css" />
+    <Content Include="codebase\dhtmlxscheduler_flat.css" />
+    <Content Include="codebase\dhtmlxscheduler_material.css" />
+    <Content Include="codebase\dhtmlxscheduler_terrace.css" />
+    <Content Include="codebase\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_csp.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_url.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="codebase\imgs\buttons.png" />
+    <Content Include="codebase\imgs\but_repeat.gif" />
+    <Content Include="codebase\imgs\calendar.gif" />
+    <Content Include="codebase\imgs\clock_big.gif" />
+    <Content Include="codebase\imgs\clock_small.gif" />
+    <Content Include="codebase\imgs\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs\controls.gif" />
+    <Content Include="codebase\imgs\databg.png" />
+    <Content Include="codebase\imgs\databg_now.png" />
+    <Content Include="codebase\imgs\export_ical.png" />
+    <Content Include="codebase\imgs\export_pdf.png" />
+    <Content Include="codebase\imgs\icon.png" />
+    <Content Include="codebase\imgs\images.png" />
+    <Content Include="codebase\imgs\loading.gif" />
+    <Content Include="codebase\imgs\resize_dots.png" />
+    <Content Include="codebase\imgs_contrast_black\arrow_left.png" />
+    <Content Include="codebase\imgs_contrast_black\arrow_right.png" />
+    <Content Include="codebase\imgs_contrast_black\but_repeat.gif" />
+    <Content Include="codebase\imgs_contrast_black\calendar.gif" />
+    <Content Include="codebase\imgs_contrast_black\clock_big.gif" />
+    <Content Include="codebase\imgs_contrast_black\clock_small.gif" />
+    <Content Include="codebase\imgs_contrast_black\close_icon.png" />
+    <Content Include="codebase\imgs_contrast_black\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_contrast_black\controls.png" />
+    <Content Include="codebase\imgs_contrast_black\databg.png" />
+    <Content Include="codebase\imgs_contrast_black\databg_now.png" />
+    <Content Include="codebase\imgs_contrast_black\export_ical.png" />
+    <Content Include="codebase\imgs_contrast_black\export_pdf.png" />
+    <Content Include="codebase\imgs_contrast_black\resize_dots.png" />
+    <Content Include="codebase\imgs_contrast_black\resizing.png" />
+    <Content Include="codebase\imgs_contrast_white\arrow_left.png" />
+    <Content Include="codebase\imgs_contrast_white\arrow_right.png" />
+    <Content Include="codebase\imgs_contrast_white\but_repeat.gif" />
+    <Content Include="codebase\imgs_contrast_white\calendar.gif" />
+    <Content Include="codebase\imgs_contrast_white\clock_big.gif" />
+    <Content Include="codebase\imgs_contrast_white\clock_small.gif" />
+    <Content Include="codebase\imgs_contrast_white\close_icon.png" />
+    <Content Include="codebase\imgs_contrast_white\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_contrast_white\controls.png" />
+    <Content Include="codebase\imgs_contrast_white\databg.png" />
+    <Content Include="codebase\imgs_contrast_white\export_ical.png" />
+    <Content Include="codebase\imgs_contrast_white\export_pdf.png" />
+    <Content Include="codebase\imgs_contrast_white\quick_info_edit.png" />
+    <Content Include="codebase\imgs_contrast_white\resize_dots.png" />
+    <Content Include="codebase\imgs_contrast_white\resizing.png" />
+    <Content Include="codebase\imgs_dhx_material\agenda-calendar-hov.svg" />
+    <Content Include="codebase\imgs_dhx_material\agenda-calendar.svg" />
+    <Content Include="codebase\imgs_dhx_material\agenda_bg.png" />
+    <Content Include="codebase\imgs_dhx_material\arrow_left.svg" />
+    <Content Include="codebase\imgs_dhx_material\arrow_left_hov.svg" />
+    <Content Include="codebase\imgs_dhx_material\arrow_right.svg" />
+    <Content Include="codebase\imgs_dhx_material\arrow_right_hov.svg" />
+    <Content Include="codebase\imgs_dhx_material\but_repeat.png" />
+    <Content Include="codebase\imgs_dhx_material\calendar.svg" />
+    <Content Include="codebase\imgs_dhx_material\clock_big.png" />
+    <Content Include="codebase\imgs_dhx_material\clock_small.png" />
+    <Content Include="codebase\imgs_dhx_material\close_icon.png" />
+    <Content Include="codebase\imgs_dhx_material\collapse_expand_icon.png" />
+    <Content Include="codebase\imgs_dhx_material\controls.png" />
+    <Content Include="codebase\imgs_dhx_material\databg.png" />
+    <Content Include="codebase\imgs_dhx_material\drag-horizontal.svg" />
+    <Content Include="codebase\imgs_dhx_material\drag-vertical.svg" />
+    <Content Include="codebase\imgs_dhx_material\export_ical.png" />
+    <Content Include="codebase\imgs_dhx_material\export_pdf.png" />
+    <Content Include="codebase\imgs_dhx_material\icon.png" />
+    <Content Include="codebase\imgs_dhx_material\menu-down.svg" />
+    <Content Include="codebase\imgs_dhx_material\resizing.png" />
+    <Content Include="codebase\imgs_dhx_material\Shape.svg" />
+    <Content Include="codebase\imgs_dhx_material\time.svg" />
+    <Content Include="codebase\imgs_dhx_material\tree_arrow.svg" />
+    <Content Include="codebase\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="codebase\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="codebase\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="codebase\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\controls.png" />
+    <Content Include="codebase\imgs_dhx_terrace\databg.png" />
+    <Content Include="codebase\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="codebase\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="codebase\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="codebase\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="codebase\imgs_dhx_terrace\resizing.png" />
+    <Content Include="codebase\imgs_flat\agenda_bg.gif" />
+    <Content Include="codebase\imgs_flat\arrow_left.png" />
+    <Content Include="codebase\imgs_flat\arrow_right.png" />
+    <Content Include="codebase\imgs_flat\but_repeat.gif" />
+    <Content Include="codebase\imgs_flat\calendar.gif" />
+    <Content Include="codebase\imgs_flat\clock.png" />
+    <Content Include="codebase\imgs_flat\clock_big.gif" />
+    <Content Include="codebase\imgs_flat\clock_small.gif" />
+    <Content Include="codebase\imgs_flat\close_icon.png" />
+    <Content Include="codebase\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_flat\controls.png" />
+    <Content Include="codebase\imgs_flat\databg.png" />
+    <Content Include="codebase\imgs_flat\databg_now.png" />
+    <Content Include="codebase\imgs_flat\export_ical.png" />
+    <Content Include="codebase\imgs_flat\export_pdf.png" />
+    <Content Include="codebase\imgs_flat\resize_dots.png" />
+    <Content Include="codebase\imgs_flat\resizing.png" />
+    <Content Include="codebase\locale\locale_ar.js" />
+    <Content Include="codebase\locale\locale_be.js" />
+    <Content Include="codebase\locale\locale_ca.js" />
+    <Content Include="codebase\locale\locale_cn.js" />
+    <Content Include="codebase\locale\locale_cs.js" />
+    <Content Include="codebase\locale\locale_da.js" />
+    <Content Include="codebase\locale\locale_de.js" />
+    <Content Include="codebase\locale\locale_el.js" />
+    <Content Include="codebase\locale\locale_en.js" />
+    <Content Include="codebase\locale\locale_es.js" />
+    <Content Include="codebase\locale\locale_fi.js" />
+    <Content Include="codebase\locale\locale_fr.js" />
+    <Content Include="codebase\locale\locale_he.js" />
+    <Content Include="codebase\locale\locale_hu.js" />
+    <Content Include="codebase\locale\locale_id.js" />
+    <Content Include="codebase\locale\locale_it.js" />
+    <Content Include="codebase\locale\locale_jp.js" />
+    <Content Include="codebase\locale\locale_nb.js" />
+    <Content Include="codebase\locale\locale_nl.js" />
+    <Content Include="codebase\locale\locale_no.js" />
+    <Content Include="codebase\locale\locale_pl.js" />
+    <Content Include="codebase\locale\locale_pt.js" />
+    <Content Include="codebase\locale\locale_ro.js" />
+    <Content Include="codebase\locale\locale_ru.js" />
+    <Content Include="codebase\locale\locale_si.js" />
+    <Content Include="codebase\locale\locale_sk.js" />
+    <Content Include="codebase\locale\locale_sv.js" />
+    <Content Include="codebase\locale\locale_tr.js" />
+    <Content Include="codebase\locale\locale_ua.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_be.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_cn.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_cs.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_da.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_de.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_el.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_en.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_es.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_fi.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_fr.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_he.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_it.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_nb.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_nl.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_pl.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_pt.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_ro.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_ru.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_sk.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_sv.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_ua.js" />
+    <Content Include="codebase\locale\recurring\repeat_template_be.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_cn.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_de.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_el.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_en.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_es.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_fr.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_he.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_it.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_nl.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_ro.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_ru.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_sk.html" />
+    <Content Include="codebase\sources\dhtmlxscheduler.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_csp.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_url.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="codebase\sources\less\imgs\buttons.png" />
+    <Content Include="codebase\sources\less\imgs\but_repeat.gif" />
+    <Content Include="codebase\sources\less\imgs\calendar.gif" />
+    <Content Include="codebase\sources\less\imgs\clock_big.gif" />
+    <Content Include="codebase\sources\less\imgs\clock_small.gif" />
+    <Content Include="codebase\sources\less\imgs\collapse_expand_icon.gif" />
+    <Content Include="codebase\sources\less\imgs\controls.gif" />
+    <Content Include="codebase\sources\less\imgs\databg.png" />
+    <Content Include="codebase\sources\less\imgs\databg_now.png" />
+    <Content Include="codebase\sources\less\imgs\export_ical.png" />
+    <Content Include="codebase\sources\less\imgs\export_pdf.png" />
+    <Content Include="codebase\sources\less\imgs\icon.png" />
+    <Content Include="codebase\sources\less\imgs\images.png" />
+    <Content Include="codebase\sources\less\imgs\loading.gif" />
+    <Content Include="codebase\sources\less\imgs\resize_dots.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\arrow_left.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\arrow_right.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\but_repeat.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\calendar.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\clock_big.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\clock_small.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\close_icon.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\collapse_expand_icon.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\controls.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\databg.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\databg_now.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\export_ical.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\export_pdf.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\resize_dots.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_black\resizing.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\arrow_left.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\arrow_right.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\but_repeat.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\calendar.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\clock_big.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\clock_small.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\close_icon.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\collapse_expand_icon.gif" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\controls.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\databg.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\export_ical.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\export_pdf.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\quick_info_edit.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\resize_dots.png" />
+    <Content Include="codebase\sources\less\imgs_contrast_white\resizing.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\agenda-calendar-hov.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\agenda-calendar.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\agenda_bg.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\arrow_left.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\arrow_left_hov.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\arrow_right.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\arrow_right_hov.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\but_repeat.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\calendar.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\clock_big.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\clock_small.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\close_icon.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\collapse_expand_icon.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\controls.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\databg.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\drag-horizontal.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\drag-vertical.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\export_ical.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\export_pdf.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\icon.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\menu-down.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\resizing.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\Shape.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\time.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_material\tree_arrow.svg" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\controls.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\databg.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="codebase\sources\less\imgs_dhx_terrace\resizing.png" />
+    <Content Include="codebase\sources\less\imgs_flat\agenda_bg.gif" />
+    <Content Include="codebase\sources\less\imgs_flat\arrow_left.png" />
+    <Content Include="codebase\sources\less\imgs_flat\arrow_right.png" />
+    <Content Include="codebase\sources\less\imgs_flat\but_repeat.gif" />
+    <Content Include="codebase\sources\less\imgs_flat\calendar.gif" />
+    <Content Include="codebase\sources\less\imgs_flat\clock.png" />
+    <Content Include="codebase\sources\less\imgs_flat\clock_big.gif" />
+    <Content Include="codebase\sources\less\imgs_flat\clock_small.gif" />
+    <Content Include="codebase\sources\less\imgs_flat\close_icon.png" />
+    <Content Include="codebase\sources\less\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="codebase\sources\less\imgs_flat\controls.png" />
+    <Content Include="codebase\sources\less\imgs_flat\databg.png" />
+    <Content Include="codebase\sources\less\imgs_flat\databg_now.png" />
+    <Content Include="codebase\sources\less\imgs_flat\export_ical.png" />
+    <Content Include="codebase\sources\less\imgs_flat\export_pdf.png" />
+    <Content Include="codebase\sources\less\imgs_flat\resize_dots.png" />
+    <Content Include="codebase\sources\less\imgs_flat\resizing.png" />
+    <Content Include="codebase\sources\locale\locale_ar.js" />
+    <Content Include="codebase\sources\locale\locale_be.js" />
+    <Content Include="codebase\sources\locale\locale_ca.js" />
+    <Content Include="codebase\sources\locale\locale_cn.js" />
+    <Content Include="codebase\sources\locale\locale_cs.js" />
+    <Content Include="codebase\sources\locale\locale_da.js" />
+    <Content Include="codebase\sources\locale\locale_de.js" />
+    <Content Include="codebase\sources\locale\locale_el.js" />
+    <Content Include="codebase\sources\locale\locale_en.js" />
+    <Content Include="codebase\sources\locale\locale_es.js" />
+    <Content Include="codebase\sources\locale\locale_fi.js" />
+    <Content Include="codebase\sources\locale\locale_fr.js" />
+    <Content Include="codebase\sources\locale\locale_he.js" />
+    <Content Include="codebase\sources\locale\locale_hu.js" />
+    <Content Include="codebase\sources\locale\locale_id.js" />
+    <Content Include="codebase\sources\locale\locale_it.js" />
+    <Content Include="codebase\sources\locale\locale_jp.js" />
+    <Content Include="codebase\sources\locale\locale_nb.js" />
+    <Content Include="codebase\sources\locale\locale_nl.js" />
+    <Content Include="codebase\sources\locale\locale_no.js" />
+    <Content Include="codebase\sources\locale\locale_pl.js" />
+    <Content Include="codebase\sources\locale\locale_pt.js" />
+    <Content Include="codebase\sources\locale\locale_ro.js" />
+    <Content Include="codebase\sources\locale\locale_ru.js" />
+    <Content Include="codebase\sources\locale\locale_si.js" />
+    <Content Include="codebase\sources\locale\locale_sk.js" />
+    <Content Include="codebase\sources\locale\locale_sv.js" />
+    <Content Include="codebase\sources\locale\locale_tr.js" />
+    <Content Include="codebase\sources\locale\locale_ua.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_be.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_cn.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_cs.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_da.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_de.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_el.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_en.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_es.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_fi.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_fr.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_he.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_it.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_nb.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_nl.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_pl.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_pt.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_ro.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_ru.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_sk.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_sv.js" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_ua.js" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_be.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_cn.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_de.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_el.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_en.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_es.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_fr.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_he.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_it.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_nl.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_ro.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_ru.html" />
+    <Content Include="codebase\sources\locale\recurring\repeat_template_sk.html" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_contrast_black.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_contrast_white.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_flat.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_material.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_terrace.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\DateTimePicker.min.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\jquery-ui.structure.min.css" />
+    <Content Include="css\jquery.classycountdown.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\price.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\tables.css" />
+    <Content Include="css\vendors.css" />
+    <Content Include="css\video.css" />
+    <Content Include="fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="fonts\glyphicons-halflings-regular-5.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.html" />
+    <Content Include="fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="fullcalendar-3.9.0\CHANGELOG.txt" />
+    <Content Include="fullcalendar-3.9.0\CONTRIBUTING.txt" />
+    <Content Include="fullcalendar-3.9.0\demos\agenda-views.html" />
+    <Content Include="fullcalendar-3.9.0\demos\background-events.html" />
+    <Content Include="fullcalendar-3.9.0\demos\basic-views.html" />
+    <Content Include="fullcalendar-3.9.0\demos\default.html" />
+    <Content Include="fullcalendar-3.9.0\demos\external-dragging.html" />
+    <Content Include="fullcalendar-3.9.0\demos\gcal.html" />
+    <Content Include="fullcalendar-3.9.0\demos\json.html" />
+    <Content Include="fullcalendar-3.9.0\demos\js\theme-chooser.js" />
+    <Content Include="fullcalendar-3.9.0\demos\list-views.html" />
+    <Content Include="fullcalendar-3.9.0\demos\locales.html" />
+    <Content Include="fullcalendar-3.9.0\demos\php\get-events.php" />
+    <Content Include="fullcalendar-3.9.0\demos\php\get-timezones.php" />
+    <Content Include="fullcalendar-3.9.0\demos\php\utils.php" />
+    <Content Include="fullcalendar-3.9.0\demos\selectable.html" />
+    <Content Include="fullcalendar-3.9.0\demos\themes.html" />
+    <Content Include="fullcalendar-3.9.0\demos\timezones.html" />
+    <Content Include="fullcalendar-3.9.0\demos\week-numbers.html" />
+    <Content Include="fullcalendar-3.9.0\fullcalendar.css" />
+    <Content Include="fullcalendar-3.9.0\fullcalendar.js" />
+    <Content Include="fullcalendar-3.9.0\fullcalendar.min.css" />
+    <Content Include="fullcalendar-3.9.0\fullcalendar.min.js" />
+    <Content Include="fullcalendar-3.9.0\fullcalendar.print.css" />
+    <Content Include="fullcalendar-3.9.0\fullcalendar.print.min.css" />
+    <Content Include="fullcalendar-3.9.0\gcal.js" />
+    <Content Include="fullcalendar-3.9.0\gcal.min.js" />
+    <Content Include="fullcalendar-3.9.0\lib\jquery-ui.min.js" />
+    <Content Include="fullcalendar-3.9.0\lib\jquery.min.js" />
+    <Content Include="fullcalendar-3.9.0\lib\moment.min.js" />
+    <Content Include="fullcalendar-3.9.0\LICENSE.txt" />
+    <Content Include="fullcalendar-3.9.0\locale-all.js" />
+    <Content Include="fullcalendar-3.9.0\locale\af.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar-dz.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar-kw.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar-ly.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar-ma.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar-sa.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar-tn.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ar.js" />
+    <Content Include="fullcalendar-3.9.0\locale\bg.js" />
+    <Content Include="fullcalendar-3.9.0\locale\bs.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ca.js" />
+    <Content Include="fullcalendar-3.9.0\locale\cs.js" />
+    <Content Include="fullcalendar-3.9.0\locale\da.js" />
+    <Content Include="fullcalendar-3.9.0\locale\de-at.js" />
+    <Content Include="fullcalendar-3.9.0\locale\de-ch.js" />
+    <Content Include="fullcalendar-3.9.0\locale\de.js" />
+    <Content Include="fullcalendar-3.9.0\locale\el.js" />
+    <Content Include="fullcalendar-3.9.0\locale\en-au.js" />
+    <Content Include="fullcalendar-3.9.0\locale\en-ca.js" />
+    <Content Include="fullcalendar-3.9.0\locale\en-gb.js" />
+    <Content Include="fullcalendar-3.9.0\locale\en-ie.js" />
+    <Content Include="fullcalendar-3.9.0\locale\en-nz.js" />
+    <Content Include="fullcalendar-3.9.0\locale\es-do.js" />
+    <Content Include="fullcalendar-3.9.0\locale\es-us.js" />
+    <Content Include="fullcalendar-3.9.0\locale\es.js" />
+    <Content Include="fullcalendar-3.9.0\locale\et.js" />
+    <Content Include="fullcalendar-3.9.0\locale\eu.js" />
+    <Content Include="fullcalendar-3.9.0\locale\fa.js" />
+    <Content Include="fullcalendar-3.9.0\locale\fi.js" />
+    <Content Include="fullcalendar-3.9.0\locale\fr-ca.js" />
+    <Content Include="fullcalendar-3.9.0\locale\fr-ch.js" />
+    <Content Include="fullcalendar-3.9.0\locale\fr.js" />
+    <Content Include="fullcalendar-3.9.0\locale\gl.js" />
+    <Content Include="fullcalendar-3.9.0\locale\he.js" />
+    <Content Include="fullcalendar-3.9.0\locale\hi.js" />
+    <Content Include="fullcalendar-3.9.0\locale\hr.js" />
+    <Content Include="fullcalendar-3.9.0\locale\hu.js" />
+    <Content Include="fullcalendar-3.9.0\locale\id.js" />
+    <Content Include="fullcalendar-3.9.0\locale\is.js" />
+    <Content Include="fullcalendar-3.9.0\locale\it.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ja.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ka.js" />
+    <Content Include="fullcalendar-3.9.0\locale\kk.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ko.js" />
+    <Content Include="fullcalendar-3.9.0\locale\lb.js" />
+    <Content Include="fullcalendar-3.9.0\locale\lt.js" />
+    <Content Include="fullcalendar-3.9.0\locale\lv.js" />
+    <Content Include="fullcalendar-3.9.0\locale\mk.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ms-my.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ms.js" />
+    <Content Include="fullcalendar-3.9.0\locale\nb.js" />
+    <Content Include="fullcalendar-3.9.0\locale\nl-be.js" />
+    <Content Include="fullcalendar-3.9.0\locale\nl.js" />
+    <Content Include="fullcalendar-3.9.0\locale\nn.js" />
+    <Content Include="fullcalendar-3.9.0\locale\pl.js" />
+    <Content Include="fullcalendar-3.9.0\locale\pt-br.js" />
+    <Content Include="fullcalendar-3.9.0\locale\pt.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ro.js" />
+    <Content Include="fullcalendar-3.9.0\locale\ru.js" />
+    <Content Include="fullcalendar-3.9.0\locale\sk.js" />
+    <Content Include="fullcalendar-3.9.0\locale\sl.js" />
+    <Content Include="fullcalendar-3.9.0\locale\sq.js" />
+    <Content Include="fullcalendar-3.9.0\locale\sr-cyrl.js" />
+    <Content Include="fullcalendar-3.9.0\locale\sr.js" />
+    <Content Include="fullcalendar-3.9.0\locale\sv.js" />
+    <Content Include="fullcalendar-3.9.0\locale\th.js" />
+    <Content Include="fullcalendar-3.9.0\locale\tr.js" />
+    <Content Include="fullcalendar-3.9.0\locale\uk.js" />
+    <Content Include="fullcalendar-3.9.0\locale\vi.js" />
+    <Content Include="fullcalendar-3.9.0\locale\zh-cn.js" />
+    <Content Include="fullcalendar-3.9.0\locale\zh-tw.js" />
+    <Content Include="home.aspx" />
+    <Content Include="img\bath.png" />
+    <Content Include="img\bed.png" />
+    <Content Include="img\boat\boat_1.jpg" />
+    <Content Include="img\boat\boat_10.jpg" />
+    <Content Include="img\boat\boat_11.jpg" />
+    <Content Include="img\boat\boat_12.jpg" />
+    <Content Include="img\boat\boat_13.jpg" />
+    <Content Include="img\boat\boat_14.jpg" />
+    <Content Include="img\boat\boat_15.jpg" />
+    <Content Include="img\boat\boat_2.jpg" />
+    <Content Include="img\boat\boat_3.jpg" />
+    <Content Include="img\boat\boat_4.jpg" />
+    <Content Include="img\boat\boat_5.jpg" />
+    <Content Include="img\boat\boat_6.jpg" />
+    <Content Include="img\boat\boat_7.jpg" />
+    <Content Include="img\boat\boat_8.jpg" />
+    <Content Include="img\boat\boat_9.jpg" />
+    <Content Include="img\calendar_icon.png" />
+    <Content Include="img\calendar_icon_grey.png" />
+    <Content Include="img\cars\gal_1_b.jpg" />
+    <Content Include="img\cars\gal_1_s.jpg" />
+    <Content Include="img\cars\gal_2_b.jpg" />
+    <Content Include="img\cars\gal_2_s.jpg" />
+    <Content Include="img\cars\gal_3_b.jpg" />
+    <Content Include="img\cars\gal_3_s.jpg" />
+    <Content Include="img\cars\gal_4_b.jpg" />
+    <Content Include="img\cars\gal_4_s.jpg" />
+    <Content Include="img\cars\gal_5_b.jpg" />
+    <Content Include="img\cars\gal_5_s.jpg" />
+    <Content Include="img\cars\gal_6_b.jpg" />
+    <Content Include="img\cars\gal_6_s.jpg" />
+    <Content Include="img\car_1.png" />
+    <Content Include="img\car_2.png" />
+    <Content Include="img\car_3.png" />
+    <Content Include="img\car_4.png" />
+    <Content Include="img\car_5.png" />
+    <Content Include="img\car_6.png" />
+    <Content Include="img\car_7.png" />
+    <Content Include="img\car_8.png" />
+    <Content Include="img\car_icon_1.png" />
+    <Content Include="img\car_icon_2.png" />
+    <Content Include="img\car_icon_3.png" />
+    <Content Include="img\car_icon_4.png" />
+    <Content Include="img\car_icon_5.png" />
+    <Content Include="img\clock.png" />
+    <Content Include="img\comment_icon_grey.png" />
+    <Content Include="img\de.png" />
+    <Content Include="img\detail\bg_1.jpg" />
+    <Content Include="img\detail\bg_2.jpg" />
+    <Content Include="img\detail\bg_3.jpg" />
+    <Content Include="img\detail\bg_4.jpg" />
+    <Content Include="img\detail\bg_5.jpg" />
+    <Content Include="img\detail\bg_6.jpg" />
+    <Content Include="img\detail\blog_1.jpg" />
+    <Content Include="img\detail\blog_2.jpg" />
+    <Content Include="img\detail\blog_gal_1.jpg" />
+    <Content Include="img\detail\blog_gal_2.jpg" />
+    <Content Include="img\detail\blog_gal_3.jpg" />
+    <Content Include="img\detail\blog_gal_4.jpg" />
+    <Content Include="img\detail\blog_gal_5.jpg" />
+    <Content Include="img\detail\blog_gal_6.jpg" />
+    <Content Include="img\detail\blog_nav_1.jpg" />
+    <Content Include="img\detail\blog_nav_2.jpg" />
+    <Content Include="img\detail\comment_1.jpg" />
+    <Content Include="img\detail\comment_2.jpg" />
+    <Content Include="img\detail\comment_3.jpg" />
+    <Content Include="img\detail\detail_logo.png" />
+    <Content Include="img\detail\detail_logo_2.png" />
+    <Content Include="img\detail\flight.jpg" />
+    <Content Include="img\detail\flightsl_small_1.jpg" />
+    <Content Include="img\detail\flightsl_small_2.jpg" />
+    <Content Include="img\detail\flightsl_small_3.jpg" />
+    <Content Include="img\detail\flight_2.jpg" />
+    <Content Include="img\detail\flight_3.jpg" />
+    <Content Include="img\detail\hotel_small_1.jpg" />
+    <Content Include="img\detail\hotel_small_2.jpg" />
+    <Content Include="img\detail\hotel_small_3.jpg" />
+    <Content Include="img\detail\interested.jpg" />
+    <Content Include="img\detail\letter-dark-2.png" />
+    <Content Include="img\detail\letter-dark.png" />
+    <Content Include="img\detail\letter-red.png" />
+    <Content Include="img\detail\letter.png" />
+    <Content Include="img\detail\m_slide_1.jpg" />
+    <Content Include="img\detail\m_slide_1s.jpg" />
+    <Content Include="img\detail\m_slide_2.jpg" />
+    <Content Include="img\detail\m_slide_2s.jpg" />
+    <Content Include="img\detail\m_slide_3.jpg" />
+    <Content Include="img\detail\m_slide_3s.jpg" />
+    <Content Include="img\detail\m_slide_4.jpg" />
+    <Content Include="img\detail\m_slide_4s.jpg" />
+    <Content Include="img\detail\m_slide_5.jpg" />
+    <Content Include="img\detail\m_slide_5s.jpg" />
+    <Content Include="img\detail\phone24-dark-2.png" />
+    <Content Include="img\detail\phone24-dark.png" />
+    <Content Include="img\detail\phone24-red.png" />
+    <Content Include="img\detail\phone24.png" />
+    <Content Include="img\detail\popular_1.jpg" />
+    <Content Include="img\detail\popular_2.jpg" />
+    <Content Include="img\detail\related_1.jpg" />
+    <Content Include="img\detail\related_2.jpg" />
+    <Content Include="img\detail\slide_1.jpg" />
+    <Content Include="img\detail\slide_1s.jpg" />
+    <Content Include="img\detail\slide_2.jpg" />
+    <Content Include="img\detail\slide_2s.jpg" />
+    <Content Include="img\detail\slide_3.jpg" />
+    <Content Include="img\detail\slide_3s.jpg" />
+    <Content Include="img\detail\slide_4.jpg" />
+    <Content Include="img\detail\slide_4s.jpg" />
+    <Content Include="img\detail\slide_5.jpg" />
+    <Content Include="img\detail\slide_5s.jpg" />
+    <Content Include="img\detail\slide_6.jpg" />
+    <Content Include="img\detail\slide_6s.jpg" />
+    <Content Include="img\detail\s_slide_1.jpg" />
+    <Content Include="img\detail\s_slide_1s.jpg" />
+    <Content Include="img\detail\s_slide_2.jpg" />
+    <Content Include="img\detail\s_slide_2s.jpg" />
+    <Content Include="img\detail\s_slide_3.jpg" />
+    <Content Include="img\detail\s_slide_3s.jpg" />
+    <Content Include="img\detail\s_slide_4.jpg" />
+    <Content Include="img\detail\s_slide_4s.jpg" />
+    <Content Include="img\detail\s_slide_5.jpg" />
+    <Content Include="img\detail\s_slide_5s.jpg" />
+    <Content Include="img\detail\tab_img.jpg" />
+    <Content Include="img\detail\tour_small_1.jpg" />
+    <Content Include="img\detail\tour_small_2.jpg" />
+    <Content Include="img\detail\tour_small_3.jpg" />
+    <Content Include="img\detail\widget_s.jpg" />
+    <Content Include="img\detail\w_gal_1.jpg" />
+    <Content Include="img\detail\w_gal_10.jpg" />
+    <Content Include="img\detail\w_gal_11.jpg" />
+    <Content Include="img\detail\w_gal_12.jpg" />
+    <Content Include="img\detail\w_gal_2.jpg" />
+    <Content Include="img\detail\w_gal_3.jpg" />
+    <Content Include="img\detail\w_gal_4.jpg" />
+    <Content Include="img\detail\w_gal_5.jpg" />
+    <Content Include="img\detail\w_gal_6.jpg" />
+    <Content Include="img\detail\w_gal_7.jpg" />
+    <Content Include="img\detail\w_gal_8.jpg" />
+    <Content Include="img\detail\w_gal_9.jpg" />
+    <Content Include="img\drag.png" />
+    <Content Include="img\en.png" />
+    <Content Include="img\flag_icon.png" />
+    <Content Include="img\flag_icon_aqua.png" />
+    <Content Include="img\flag_icon_grey.png" />
+    <Content Include="img\fr.png" />
+    <Content Include="img\gallery\arrow-left.jpg" />
+    <Content Include="img\gallery\bg_1.jpg" />
+    <Content Include="img\gallery\bg_2.jpg" />
+    <Content Include="img\gallery\bg_3.jpg" />
+    <Content Include="img\gallery\g_gal_1.jpg" />
+    <Content Include="img\gallery\g_gal_10.jpg" />
+    <Content Include="img\gallery\g_gal_11.jpg" />
+    <Content Include="img\gallery\g_gal_12.jpg" />
+    <Content Include="img\gallery\g_gal_13.jpg" />
+    <Content Include="img\gallery\g_gal_14.jpg" />
+    <Content Include="img\gallery\g_gal_15.jpg" />
+    <Content Include="img\gallery\g_gal_16.jpg" />
+    <Content Include="img\gallery\g_gal_17.jpg" />
+    <Content Include="img\gallery\g_gal_18.jpg" />
+    <Content Include="img\gallery\g_gal_19.jpg" />
+    <Content Include="img\gallery\g_gal_2.jpg" />
+    <Content Include="img\gallery\g_gal_20.jpg" />
+    <Content Include="img\gallery\g_gal_3.jpg" />
+    <Content Include="img\gallery\g_gal_4.jpg" />
+    <Content Include="img\gallery\g_gal_5.jpg" />
+    <Content Include="img\gallery\g_gal_6.jpg" />
+    <Content Include="img\gallery\g_gal_7.jpg" />
+    <Content Include="img\gallery\g_gal_8.jpg" />
+    <Content Include="img\gallery\g_gal_9.jpg" />
+    <Content Include="img\gallery\m_gal_1.jpg" />
+    <Content Include="img\gallery\m_gal_10.jpg" />
+    <Content Include="img\gallery\m_gal_11.jpg" />
+    <Content Include="img\gallery\m_gal_12.jpg" />
+    <Content Include="img\gallery\m_gal_13.jpg" />
+    <Content Include="img\gallery\m_gal_2.jpg" />
+    <Content Include="img\gallery\m_gal_3.jpg" />
+    <Content Include="img\gallery\m_gal_4.jpg" />
+    <Content Include="img\gallery\m_gal_5.jpg" />
+    <Content Include="img\gallery\m_gal_6.jpg" />
+    <Content Include="img\gallery\m_gal_7.jpg" />
+    <Content Include="img\gallery\m_gal_8.jpg" />
+    <Content Include="img\gallery\m_gal_9.jpg" />
+    <Content Include="img\gallery\slide_1.jpg" />
+    <Content Include="img\gallery\s_gal_1.jpg" />
+    <Content Include="img\gallery\s_gal_10.jpg" />
+    <Content Include="img\gallery\s_gal_11.jpg" />
+    <Content Include="img\gallery\s_gal_12.jpg" />
+    <Content Include="img\gallery\s_gal_13.jpg" />
+    <Content Include="img\gallery\s_gal_2.jpg" />
+    <Content Include="img\gallery\s_gal_3.jpg" />
+    <Content Include="img\gallery\s_gal_4.jpg" />
+    <Content Include="img\gallery\s_gal_5.jpg" />
+    <Content Include="img\gallery\s_gal_6.jpg" />
+    <Content Include="img\gallery\s_gal_7.jpg" />
+    <Content Include="img\gallery\s_gal_8.jpg" />
+    <Content Include="img\gallery\s_gal_9.jpg" />
+    <Content Include="img\gaz.png" />
+    <Content Include="img\home_10\airlines_1.png" />
+    <Content Include="img\home_10\airlines_2.png" />
+    <Content Include="img\home_10\bg_1.jpg" />
+    <Content Include="img\home_10\city_1.jpg" />
+    <Content Include="img\home_10\city_2.jpg" />
+    <Content Include="img\home_10\city_3.jpg" />
+    <Content Include="img\home_10\company_1.jpg" />
+    <Content Include="img\home_10\company_2.jpg" />
+    <Content Include="img\home_10\company_3.jpg" />
+    <Content Include="img\home_10\company_4.jpg" />
+    <Content Include="img\home_10\company_5.jpg" />
+    <Content Include="img\home_10\company_6.jpg" />
+    <Content Include="img\home_10\flight_1.jpg" />
+    <Content Include="img\home_10\flight_2.jpg" />
+    <Content Include="img\home_10\flight_3.jpg" />
+    <Content Include="img\home_10\flight_4.jpg" />
+    <Content Include="img\home_10\slider.jpg" />
+    <Content Include="img\home_10\slide_icon.png" />
+    <Content Include="img\home_10\tour_1.jpg" />
+    <Content Include="img\home_10\tour_10.jpg" />
+    <Content Include="img\home_10\tour_11.jpg" />
+    <Content Include="img\home_10\tour_12.jpg" />
+    <Content Include="img\home_10\tour_2.jpg" />
+    <Content Include="img\home_10\tour_3.jpg" />
+    <Content Include="img\home_10\tour_4.jpg" />
+    <Content Include="img\home_10\tour_5.jpg" />
+    <Content Include="img\home_10\tour_6.jpg" />
+    <Content Include="img\home_10\tour_7.jpg" />
+    <Content Include="img\home_10\tour_8.jpg" />
+    <Content Include="img\home_10\tour_9.jpg" />
+    <Content Include="img\home_1\dropdown_item_1.jpg" />
+    <Content Include="img\home_1\dropdown_item_3.jpg" />
+    <Content Include="img\home_1\dropdown_item_4.jpg" />
+    <Content Include="img\home_1\inst_img_1.jpg" />
+    <Content Include="img\home_1\inst_img_10.jpg" />
+    <Content Include="img\home_1\inst_img_2.jpg" />
+    <Content Include="img\home_1\inst_img_3.jpg" />
+    <Content Include="img\home_1\inst_img_4.jpg" />
+    <Content Include="img\home_1\inst_img_5.jpg" />
+    <Content Include="img\home_1\inst_img_6.jpg" />
+    <Content Include="img\home_1\inst_img_7.jpg" />
+    <Content Include="img\home_1\inst_img_8.jpg" />
+    <Content Include="img\home_1\inst_img_9.jpg" />
+    <Content Include="img\home_1\main_slide_1.jpg" />
+    <Content Include="img\home_1\map_1.png" />
+    <Content Include="img\home_1\map_2.png" />
+    <Content Include="img\home_1\offers_slide_1.jpg" />
+    <Content Include="img\home_1\offers_slide_2.jpg" />
+    <Content Include="img\home_1\offers_slide_3.jpg" />
+    <Content Include="img\home_1\photo_1.jpg" />
+    <Content Include="img\home_1\photo_2.jpg" />
+    <Content Include="img\home_1\photo_3.jpg" />
+    <Content Include="img\home_1\photo_4.jpg" />
+    <Content Include="img\home_1\photo_5.jpg" />
+    <Content Include="img\home_1\photo_6.jpg" />
+    <Content Include="img\home_1\photo_7.jpg" />
+    <Content Include="img\home_1\photo_8.jpg" />
+    <Content Include="img\home_1\photo_9.jpg" />
+    <Content Include="img\home_1\popular_travel_img_1.jpg" />
+    <Content Include="img\home_1\popular_travel_img_2.jpg" />
+    <Content Include="img\home_1\popular_travel_img_3.jpg" />
+    <Content Include="img\home_1\popular_travel_img_4.jpg" />
+    <Content Include="img\home_1\popular_travel_img_5.jpg" />
+    <Content Include="img\home_1\popular_travel_img_6.jpg" />
+    <Content Include="img\home_1\popular_travel_img_7.jpg" />
+    <Content Include="img\home_1\popular_travel_img_8.jpg" />
+    <Content Include="img\home_1\sea_tour_img_1.jpg" />
+    <Content Include="img\home_1\sea_tour_img_2.jpg" />
+    <Content Include="img\home_1\sea_tour_img_3.jpg" />
+    <Content Include="img\home_1\sea_tour_img_4.jpg" />
+    <Content Include="img\home_1\sea_tour_img_5.jpg" />
+    <Content Include="img\home_1\sea_tour_img_6.jpg" />
+    <Content Include="img\home_1\tour_slider_bg.jpg" />
+    <Content Include="img\home_2\close.png" />
+    <Content Include="img\home_2\item_img_1.jpg" />
+    <Content Include="img\home_2\item_img_10.jpg" />
+    <Content Include="img\home_2\item_img_11.jpg" />
+    <Content Include="img\home_2\item_img_12.jpg" />
+    <Content Include="img\home_2\item_img_2.jpg" />
+    <Content Include="img\home_2\item_img_3.jpg" />
+    <Content Include="img\home_2\item_img_4.jpg" />
+    <Content Include="img\home_2\item_img_5.jpg" />
+    <Content Include="img\home_2\item_img_6.jpg" />
+    <Content Include="img\home_2\item_img_7.jpg" />
+    <Content Include="img\home_2\item_img_8.jpg" />
+    <Content Include="img\home_2\item_img_9.jpg" />
+    <Content Include="img\home_2\main_image.jpg" />
+    <Content Include="img\home_2\people.png" />
+    <Content Include="img\home_2\play.png" />
+    <Content Include="img\home_2\tour_icon_1.png" />
+    <Content Include="img\home_2\tour_icon_2.png" />
+    <Content Include="img\home_2\tour_icon_3.png" />
+    <Content Include="img\home_3\hotel-small_1.jpg" />
+    <Content Include="img\home_3\hotel-small_10.jpg" />
+    <Content Include="img\home_3\hotel-small_11.jpg" />
+    <Content Include="img\home_3\hotel-small_12.jpg" />
+    <Content Include="img\home_3\hotel-small_2.jpg" />
+    <Content Include="img\home_3\hotel-small_3.jpg" />
+    <Content Include="img\home_3\hotel-small_4.jpg" />
+    <Content Include="img\home_3\hotel-small_5.jpg" />
+    <Content Include="img\home_3\hotel-small_6.jpg" />
+    <Content Include="img\home_3\hotel-small_7.jpg" />
+    <Content Include="img\home_3\hotel-small_8.jpg" />
+    <Content Include="img\home_3\hotel-small_9.jpg" />
+    <Content Include="img\home_3\hotel_bg.jpg" />
+    <Content Include="img\home_3\hotel_big_1.jpg" />
+    <Content Include="img\home_3\hotel_big_2.jpg" />
+    <Content Include="img\home_3\hotel_big_3.jpg" />
+    <Content Include="img\home_3\hotel_big_img_1.jpg" />
+    <Content Include="img\home_3\hotel_big_img_2.jpg" />
+    <Content Include="img\home_3\hotel_big_main.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_1.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_2.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_3.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_4.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_5.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_6.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_7.jpg" />
+    <Content Include="img\home_3\hotel_sm_img_8.jpg" />
+    <Content Include="img\home_3\hot_hotel_1.jpg" />
+    <Content Include="img\home_3\hot_hotel_2.jpg" />
+    <Content Include="img\home_3\hot_hotel_3.jpg" />
+    <Content Include="img\home_3\main_slide_1.jpg" />
+    <Content Include="img\home_3\mini_hotel_1.jpg" />
+    <Content Include="img\home_3\mini_hotel_2.jpg" />
+    <Content Include="img\home_3\mini_hotel_3.jpg" />
+    <Content Include="img\home_3\pop_hotel_1.jpg" />
+    <Content Include="img\home_3\pop_hotel_2.jpg" />
+    <Content Include="img\home_3\pop_hotel_3.jpg" />
+    <Content Include="img\home_3\pop_hotel_4.jpg" />
+    <Content Include="img\home_4\area_tours_01.jpg" />
+    <Content Include="img\home_4\area_tours_02.jpg" />
+    <Content Include="img\home_4\area_tours_03.jpg" />
+    <Content Include="img\home_4\area_tours_04.jpg" />
+    <Content Include="img\home_4\offers-block_1.jpg" />
+    <Content Include="img\home_4\offers-block_2.jpg" />
+    <Content Include="img\home_4\offers-block_3.jpg" />
+    <Content Include="img\home_4\offers-block_4.jpg" />
+    <Content Include="img\home_4\propose_1.jpg" />
+    <Content Include="img\home_4\propose_2.jpg" />
+    <Content Include="img\home_4\slide_1.jpg" />
+    <Content Include="img\home_4\slide_2.jpg" />
+    <Content Include="img\home_4\slide_3.jpg" />
+    <Content Include="img\home_4\slide_4.jpg" />
+    <Content Include="img\home_4\slide_5.jpg" />
+    <Content Include="img\home_4\tour-bg.jpg" />
+    <Content Include="img\home_4\tour-block_1.jpg" />
+    <Content Include="img\home_4\tour-block_2.jpg" />
+    <Content Include="img\home_4\tour-block_3.jpg" />
+    <Content Include="img\home_4\tour-block_4.jpg" />
+    <Content Include="img\home_4\tour_1.jpg" />
+    <Content Include="img\home_4\tour_2.jpg" />
+    <Content Include="img\home_4\tour_3.jpg" />
+    <Content Include="img\home_4\tour_4.jpg" />
+    <Content Include="img\home_4\tour_5.jpg" />
+    <Content Include="img\home_4\tour_6.jpg" />
+    <Content Include="img\home_5\bg-counter.jpg" />
+    <Content Include="img\home_5\city_1.jpg" />
+    <Content Include="img\home_5\city_2.jpg" />
+    <Content Include="img\home_5\city_3.jpg" />
+    <Content Include="img\home_5\f-logo.png" />
+    <Content Include="img\home_5\hotel_1.jpg" />
+    <Content Include="img\home_5\hotel_2.jpg" />
+    <Content Include="img\home_5\hotel_3.jpg" />
+    <Content Include="img\home_5\hotel_4.jpg" />
+    <Content Include="img\home_5\hotel_5.jpg" />
+    <Content Include="img\home_5\hotel_6.jpg" />
+    <Content Include="img\home_5\hotel_7.jpg" />
+    <Content Include="img\home_5\hotel_8.jpg" />
+    <Content Include="img\home_5\hotel_9.jpg" />
+    <Content Include="img\home_5\people_1.jpg" />
+    <Content Include="img\home_5\people_2.jpg" />
+    <Content Include="img\home_5\people_3.jpg" />
+    <Content Include="img\home_5\slider.jpg" />
+    <Content Include="img\home_5\slide_1.jpg" />
+    <Content Include="img\home_5\slide_2.jpg" />
+    <Content Include="img\home_5\slide_3.jpg" />
+    <Content Include="img\home_5\slide_preview_1.jpg" />
+    <Content Include="img\home_5\slide_preview_2.jpg" />
+    <Content Include="img\home_5\slide_preview_3.jpg" />
+    <Content Include="img\home_5\small_hotel_1.jpg" />
+    <Content Include="img\home_5\small_hotel_2.jpg" />
+    <Content Include="img\home_5\small_hotel_3.jpg" />
+    <Content Include="img\home_5\small_hotel_4.jpg" />
+    <Content Include="img\home_5\small_hotel_5.jpg" />
+    <Content Include="img\home_5\small_hotel_6.jpg" />
+    <Content Include="img\home_5\small_hotel_7.jpg" />
+    <Content Include="img\home_5\small_hotel_8.jpg" />
+    <Content Include="img\home_5\small_hotel_9.jpg" />
+    <Content Include="img\home_5\testimonal_1.jpg" />
+    <Content Include="img\home_5\testimonal_2.jpg" />
+    <Content Include="img\home_5\testimonal_3.jpg" />
+    <Content Include="img\home_5\testimonal_4.jpg" />
+    <Content Include="img\home_5\tour_1.jpg" />
+    <Content Include="img\home_5\tour_2.jpg" />
+    <Content Include="img\home_5\tour_3.jpg" />
+    <Content Include="img\home_5\tour_4.jpg" />
+    <Content Include="img\home_5\tour_5.jpg" />
+    <Content Include="img\home_6\footer_logo.png" />
+    <Content Include="img\home_6\news_1.jpg" />
+    <Content Include="img\home_6\news_2.jpg" />
+    <Content Include="img\home_6\preview_1.jpg" />
+    <Content Include="img\home_6\preview_2.jpg" />
+    <Content Include="img\home_6\preview_3.jpg" />
+    <Content Include="img\home_6\slide_1.jpg" />
+    <Content Include="img\home_6\slide_10.jpg" />
+    <Content Include="img\home_6\slide_2.jpg" />
+    <Content Include="img\home_6\slide_3.jpg" />
+    <Content Include="img\home_6\slide_4.jpg" />
+    <Content Include="img\home_6\slide_5.jpg" />
+    <Content Include="img\home_6\slide_6.jpg" />
+    <Content Include="img\home_6\slide_7.jpg" />
+    <Content Include="img\home_6\slide_8.jpg" />
+    <Content Include="img\home_6\slide_9.jpg" />
+    <Content Include="img\home_7\footer_logo.png" />
+    <Content Include="img\home_7\gal_1.jpg" />
+    <Content Include="img\home_7\gal_2.jpg" />
+    <Content Include="img\home_7\gal_3.jpg" />
+    <Content Include="img\home_7\gal_4.jpg" />
+    <Content Include="img\home_7\gal_5.jpg" />
+    <Content Include="img\home_7\gal_6.jpg" />
+    <Content Include="img\home_7\gal_7.jpg" />
+    <Content Include="img\home_7\gal_8.jpg" />
+    <Content Include="img\home_7\gal_9.jpg" />
+    <Content Include="img\home_7\holiday_1.jpg" />
+    <Content Include="img\home_7\holiday_2.jpg" />
+    <Content Include="img\home_7\holiday_3.jpg" />
+    <Content Include="img\home_7\holiday_4.jpg" />
+    <Content Include="img\home_7\partner_1.png" />
+    <Content Include="img\home_7\partner_2.png" />
+    <Content Include="img\home_7\partner_3.png" />
+    <Content Include="img\home_7\partner_4.png" />
+    <Content Include="img\home_7\partner_5.png" />
+    <Content Include="img\home_7\partner_6.png" />
+    <Content Include="img\home_7\slide_1.jpg" />
+    <Content Include="img\home_7\slide_preview_1.jpg" />
+    <Content Include="img\home_7\slide_preview_2.jpg" />
+    <Content Include="img\home_7\slide_preview_3.jpg" />
+    <Content Include="img\home_7\slide_preview_4.jpg" />
+    <Content Include="img\home_7\sl_1.jpg" />
+    <Content Include="img\home_7\sl_2.jpg" />
+    <Content Include="img\home_7\sl_3.jpg" />
+    <Content Include="img\home_7\small_hotel_1.jpg" />
+    <Content Include="img\home_7\small_hotel_2.jpg" />
+    <Content Include="img\home_7\small_hotel_3.jpg" />
+    <Content Include="img\home_7\small_hotel_4.jpg" />
+    <Content Include="img\home_7\small_hotel_5.jpg" />
+    <Content Include="img\home_7\small_hotel_6.jpg" />
+    <Content Include="img\home_7\small_hotel_7.jpg" />
+    <Content Include="img\home_7\small_hotel_8.jpg" />
+    <Content Include="img\home_7\special.jpg" />
+    <Content Include="img\home_7\testimonals.jpg" />
+    <Content Include="img\home_8\bg_block_1.jpg" />
+    <Content Include="img\home_8\bg_block_2.jpg" />
+    <Content Include="img\home_8\gal_1.jpg" />
+    <Content Include="img\home_8\gal_2.jpg" />
+    <Content Include="img\home_8\gal_3.jpg" />
+    <Content Include="img\home_8\gal_4.jpg" />
+    <Content Include="img\home_8\gal_5.jpg" />
+    <Content Include="img\home_8\gal_6.jpg" />
+    <Content Include="img\home_8\gal_7.jpg" />
+    <Content Include="img\home_8\gal_8.jpg" />
+    <Content Include="img\home_8\icon_1.png" />
+    <Content Include="img\home_8\icon_2.png" />
+    <Content Include="img\home_8\icon_3.png" />
+    <Content Include="img\home_8\icon_4.png" />
+    <Content Include="img\home_8\news_1.jpg" />
+    <Content Include="img\home_8\news_2.jpg" />
+    <Content Include="img\home_8\news_3.jpg" />
+    <Content Include="img\home_8\slide.jpg" />
+    <Content Include="img\home_8\small_hotel_1.jpg" />
+    <Content Include="img\home_8\small_hotel_2.jpg" />
+    <Content Include="img\home_8\small_hotel_3.jpg" />
+    <Content Include="img\home_8\small_hotel_4.jpg" />
+    <Content Include="img\home_8\small_hotel_5.jpg" />
+    <Content Include="img\home_8\small_hotel_6.jpg" />
+    <Content Include="img\home_8\team_1.jpg" />
+    <Content Include="img\home_8\team_2.jpg" />
+    <Content Include="img\home_8\team_3.jpg" />
+    <Content Include="img\home_8\tesiminals.jpg" />
+    <Content Include="img\home_8\tour_1.jpg" />
+    <Content Include="img\home_8\tour_2.jpg" />
+    <Content Include="img\home_8\tour_3.jpg" />
+    <Content Include="img\home_9\bg-tab.jpg" />
+    <Content Include="img\home_9\bg_1.jpg" />
+    <Content Include="img\home_9\bg_2.jpg" />
+    <Content Include="img\home_9\bg_3.jpg" />
+    <Content Include="img\home_9\city_1.jpg" />
+    <Content Include="img\home_9\city_2.jpg" />
+    <Content Include="img\home_9\city_3.jpg" />
+    <Content Include="img\home_9\city_4.jpg" />
+    <Content Include="img\home_9\country_1.png" />
+    <Content Include="img\home_9\country_2.png" />
+    <Content Include="img\home_9\country_3.png" />
+    <Content Include="img\home_9\country_4.png" />
+    <Content Include="img\home_9\cruise_1.jpg" />
+    <Content Include="img\home_9\cruise_2.jpg" />
+    <Content Include="img\home_9\cruise_3.jpg" />
+    <Content Include="img\home_9\cruise_4.jpg" />
+    <Content Include="img\home_9\cruise_5.jpg" />
+    <Content Include="img\home_9\cruise_6.jpg" />
+    <Content Include="img\home_9\cruise_7.jpg" />
+    <Content Include="img\home_9\cruise_8.jpg" />
+    <Content Include="img\home_9\f_slide.jpg" />
+    <Content Include="img\home_9\icon_1.jpg" />
+    <Content Include="img\home_9\icon_2.jpg" />
+    <Content Include="img\home_9\icon_3.jpg" />
+    <Content Include="img\home_9\icon_4.jpg" />
+    <Content Include="img\home_9\preview_1.jpg" />
+    <Content Include="img\home_9\preview_2.jpg" />
+    <Content Include="img\home_9\preview_3.jpg" />
+    <Content Include="img\home_9\preview_4.jpg" />
+    <Content Include="img\home_9\preview_5.jpg" />
+    <Content Include="img\home_9\preview_6.jpg" />
+    <Content Include="img\home_9\preview_7.jpg" />
+    <Content Include="img\home_9\preview_8.jpg" />
+    <Content Include="img\home_9\slide_1.jpg" />
+    <Content Include="img\home_9\slide_icon.png" />
+    <Content Include="img\home_9\special.jpg" />
+    <Content Include="img\home_9\tour_1.jpg" />
+    <Content Include="img\home_9\tour_2.jpg" />
+    <Content Include="img\home_9\tour_3.jpg" />
+    <Content Include="img\home_9\tour_4.jpg" />
+    <Content Include="img\inner\about.jpg" />
+    <Content Include="img\inner\about_2.jpg" />
+    <Content Include="img\inner\about_3.jpg" />
+    <Content Include="img\inner\bg_1.jpg" />
+    <Content Include="img\inner\bg_2.jpg" />
+    <Content Include="img\inner\bg_3.jpg" />
+    <Content Include="img\inner\bg_4.jpg" />
+    <Content Include="img\inner\bg_5.jpg" />
+    <Content Include="img\inner\bg_6.jpg" />
+    <Content Include="img\inner\bg_7.jpg" />
+    <Content Include="img\inner\blog_grid_1.jpg" />
+    <Content Include="img\inner\blog_grid_10.jpg" />
+    <Content Include="img\inner\blog_grid_11.jpg" />
+    <Content Include="img\inner\blog_grid_12.jpg" />
+    <Content Include="img\inner\blog_grid_2.jpg" />
+    <Content Include="img\inner\blog_grid_3.jpg" />
+    <Content Include="img\inner\blog_grid_4.jpg" />
+    <Content Include="img\inner\blog_grid_5.jpg" />
+    <Content Include="img\inner\blog_grid_6.jpg" />
+    <Content Include="img\inner\blog_grid_7.jpg" />
+    <Content Include="img\inner\blog_grid_8.jpg" />
+    <Content Include="img\inner\blog_grid_9.jpg" />
+    <Content Include="img\inner\c_icon_1.png" />
+    <Content Include="img\inner\c_icon_2.png" />
+    <Content Include="img\inner\c_icon_3.png" />
+    <Content Include="img\inner\c_icon_4.png" />
+    <Content Include="img\inner\icon_1.png" />
+    <Content Include="img\inner\icon_2.png" />
+    <Content Include="img\inner\icon_3.png" />
+    <Content Include="img\inner\icon_4.png" />
+    <Content Include="img\inner\icon_5.png" />
+    <Content Include="img\inner\icon_6.png" />
+    <Content Include="img\inner\icon_7.png" />
+    <Content Include="img\inner\icon_8.png" />
+    <Content Include="img\inner\investors_1.png" />
+    <Content Include="img\inner\investors_10.png" />
+    <Content Include="img\inner\investors_11.png" />
+    <Content Include="img\inner\investors_12.png" />
+    <Content Include="img\inner\investors_2.png" />
+    <Content Include="img\inner\investors_3.png" />
+    <Content Include="img\inner\investors_4.png" />
+    <Content Include="img\inner\investors_5.png" />
+    <Content Include="img\inner\investors_6.png" />
+    <Content Include="img\inner\investors_7.png" />
+    <Content Include="img\inner\investors_8.png" />
+    <Content Include="img\inner\investors_9.png" />
+    <Content Include="img\inner\m_icon_1.png" />
+    <Content Include="img\inner\m_icon_2.png" />
+    <Content Include="img\inner\m_icon_3.png" />
+    <Content Include="img\inner\m_icon_4.png" />
+    <Content Include="img\inner\m_icon_5.png" />
+    <Content Include="img\inner\m_icon_6.png" />
+    <Content Include="img\inner\m_icon_7.png" />
+    <Content Include="img\inner\m_icon_8.png" />
+    <Content Include="img\inner\tariff_1.jpg" />
+    <Content Include="img\inner\tariff_2.jpg" />
+    <Content Include="img\inner\tariff_3.jpg" />
+    <Content Include="img\inner\tour_1.jpg" />
+    <Content Include="img\inner\tour_2.jpg" />
+    <Content Include="img\inner\tour_3.jpg" />
+    <Content Include="img\inner\tour_4.jpg" />
+    <Content Include="img\inner\tour_5.jpg" />
+    <Content Include="img\ja.png" />
+    <Content Include="img\ko.png" />
+    <Content Include="img\landing\footer_1.png" />
+    <Content Include="img\landing\footer_2.png" />
+    <Content Include="img\landing\footer_3.png" />
+    <Content Include="img\landing\footer_4.png" />
+    <Content Include="img\landing\footer_5.png" />
+    <Content Include="img\landing\header_1.png" />
+    <Content Include="img\landing\header_2.png" />
+    <Content Include="img\landing\header_3.png" />
+    <Content Include="img\landing\header_4.png" />
+    <Content Include="img\landing\header_5.png" />
+    <Content Include="img\landing\header_6.png" />
+    <Content Include="img\loc_icon.png" />
+    <Content Include="img\loc_icon_2_dark.png" />
+    <Content Include="img\loc_icon_blue.png" />
+    <Content Include="img\loc_icon_dark.png" />
+    <Content Include="img\loc_icon_small.png" />
+    <Content Include="img\loc_icon_small_drak.png" />
+    <Content Include="img\loc_icon_small_grey.png" />
+    <Content Include="img\mail_icon_blue.png" />
+    <Content Include="img\mail_icon_b_blue.png" />
+    <Content Include="img\mail_icon_b_dark.png" />
+    <Content Include="img\mail_icon_dark.png" />
+    <Content Include="img\mail_icon_l_dark.png" />
+    <Content Include="img\people_icon.png" />
+    <Content Include="img\people_icon_grey.png" />
+    <Content Include="img\phone_icon_2_blue.png" />
+    <Content Include="img\phone_icon_2_dark.png" />
+    <Content Include="img\phone_icon_3_dark.png" />
+    <Content Include="img\phone_icon_blue.png" />
+    <Content Include="img\phone_icon_dark.png" />
+    <Content Include="img\plane.png" />
+    <Content Include="img\poster.html" />
+    <Content Include="img\quot.png" />
+    <Content Include="img\quote.png" />
+    <Content Include="img\rent_1.jpg" />
+    <Content Include="img\rent_10.jpg" />
+    <Content Include="img\rent_11.jpg" />
+    <Content Include="img\rent_12.jpg" />
+    <Content Include="img\rent_13.jpg" />
+    <Content Include="img\rent_14.jpg" />
+    <Content Include="img\rent_15.jpg" />
+    <Content Include="img\rent_16.jpg" />
+    <Content Include="img\rent_17.jpg" />
+    <Content Include="img\rent_18.jpg" />
+    <Content Include="img\rent_19.jpg" />
+    <Content Include="img\rent_2.jpg" />
+    <Content Include="img\rent_20.jpg" />
+    <Content Include="img\rent_3.jpg" />
+    <Content Include="img\rent_4.jpg" />
+    <Content Include="img\rent_5.jpg" />
+    <Content Include="img\rent_6.jpg" />
+    <Content Include="img\rent_7.jpg" />
+    <Content Include="img\rent_8.jpg" />
+    <Content Include="img\rent_9.jpg" />
+    <Content Include="img\search_icon.png" />
+    <Content Include="img\search_icon_small.png" />
+    <Content Include="img\search_icon_small_blue.png" />
+    <Content Include="img\search_icon_small_grey.png" />
+    <Content Include="img\shop_icon_blue.png" />
+    <Content Include="img\special\bg-1.jpg" />
+    <Content Include="img\special\bg-2.jpg" />
+    <Content Include="img\special\bg-3.jpg" />
+    <Content Include="img\special\bg-4.jpg" />
+    <Content Include="img\special\login.jpg" />
+    <Content Include="img\special\soon.jpg" />
+    <Content Include="img\speed.png" />
+    <Content Include="img\theme-1\c_icon_1.png" />
+    <Content Include="img\theme-1\c_icon_2.png" />
+    <Content Include="img\theme-1\c_icon_3.png" />
+    <Content Include="img\theme-1\c_icon_4.png" />
+    <Content Include="img\theme-1\logo.png" />
+    <Content Include="img\theme-1\logo_dark.png" />
+    <Content Include="img\theme-4\logo_dark.png" />
+    <Content Include="img\theme-5\country_1.png" />
+    <Content Include="img\theme-5\country_2.png" />
+    <Content Include="img\theme-5\country_3.png" />
+    <Content Include="img\theme-5\country_4.png" />
+    <Content Include="img\theme-5\country_5.png" />
+    <Content Include="img\theme-5\country_6.png" />
+    <Content Include="img\theme-5\c_icon_1.png" />
+    <Content Include="img\theme-5\c_icon_2.png" />
+    <Content Include="img\theme-5\c_icon_3.png" />
+    <Content Include="img\theme-5\c_icon_4.png" />
+    <Content Include="img\thx_icon.png" />
+    <Content Include="img\tour_list\bg_1.jpg" />
+    <Content Include="img\tour_list\bg_2.jpg" />
+    <Content Include="img\tour_list\bg_3.jpg" />
+    <Content Include="img\tour_list\bg_4.jpg" />
+    <Content Include="img\tour_list\cruise_grid_1.jpg" />
+    <Content Include="img\tour_list\cruise_grid_10.jpg" />
+    <Content Include="img\tour_list\cruise_grid_11.jpg" />
+    <Content Include="img\tour_list\cruise_grid_12.jpg" />
+    <Content Include="img\tour_list\cruise_grid_2.jpg" />
+    <Content Include="img\tour_list\cruise_grid_3.jpg" />
+    <Content Include="img\tour_list\cruise_grid_4.jpg" />
+    <Content Include="img\tour_list\cruise_grid_5.jpg" />
+    <Content Include="img\tour_list\cruise_grid_6.jpg" />
+    <Content Include="img\tour_list\cruise_grid_7.jpg" />
+    <Content Include="img\tour_list\cruise_grid_8.jpg" />
+    <Content Include="img\tour_list\cruise_grid_9.jpg" />
+    <Content Include="img\tour_list\cruise_logo_1.jpg" />
+    <Content Include="img\tour_list\cruise_logo_2.jpg" />
+    <Content Include="img\tour_list\cruise_logo_3.jpg" />
+    <Content Include="img\tour_list\flight_grid_1.jpg" />
+    <Content Include="img\tour_list\flight_grid_2.jpg" />
+    <Content Include="img\tour_list\flight_grid_3.jpg" />
+    <Content Include="img\tour_list\flight_grid_4.jpg" />
+    <Content Include="img\tour_list\flight_icon_1.png" />
+    <Content Include="img\tour_list\flight_icon_2.png" />
+    <Content Include="img\tour_list\hotel_grid_1.jpg" />
+    <Content Include="img\tour_list\hotel_grid_10.jpg" />
+    <Content Include="img\tour_list\hotel_grid_11.jpg" />
+    <Content Include="img\tour_list\hotel_grid_12.jpg" />
+    <Content Include="img\tour_list\hotel_grid_13.jpg" />
+    <Content Include="img\tour_list\hotel_grid_14.jpg" />
+    <Content Include="img\tour_list\hotel_grid_15.jpg" />
+    <Content Include="img\tour_list\hotel_grid_2.jpg" />
+    <Content Include="img\tour_list\hotel_grid_3.jpg" />
+    <Content Include="img\tour_list\hotel_grid_4.jpg" />
+    <Content Include="img\tour_list\hotel_grid_5.jpg" />
+    <Content Include="img\tour_list\hotel_grid_6.jpg" />
+    <Content Include="img\tour_list\hotel_grid_7.jpg" />
+    <Content Include="img\tour_list\hotel_grid_8.jpg" />
+    <Content Include="img\tour_list\hotel_grid_9.jpg" />
+    <Content Include="img\tour_list\hotel_icon_1.png" />
+    <Content Include="img\tour_list\hotel_icon_2.png" />
+    <Content Include="img\tour_list\hotel_icon_3.png" />
+    <Content Include="img\tour_list\hotel_icon_4.png" />
+    <Content Include="img\tour_list\hotel_icon_5.png" />
+    <Content Include="img\tour_list\inner_banner_1.jpg" />
+    <Content Include="img\tour_list\inner_banner_2.jpg" />
+    <Content Include="img\tour_list\inner_banner_3.jpg" />
+    <Content Include="img\tour_list\tour_1.jpg" />
+    <Content Include="img\tour_list\tour_2.jpg" />
+    <Content Include="img\tour_list\tour_3.jpg" />
+    <Content Include="img\tour_list\tour_4.jpg" />
+    <Content Include="img\tour_list\tour_5.jpg" />
+    <Content Include="img\tour_list\tour_6.jpg" />
+    <Content Include="img\tour_list\tour_7.jpg" />
+    <Content Include="img\tour_list\tour_9.jpg" />
+    <Content Include="img\tour_list\tour_grid_1.jpg" />
+    <Content Include="img\tour_list\tour_grid_10.jpg" />
+    <Content Include="img\tour_list\tour_grid_11.jpg" />
+    <Content Include="img\tour_list\tour_grid_12.jpg" />
+    <Content Include="img\tour_list\tour_grid_13.jpg" />
+    <Content Include="img\tour_list\tour_grid_14.jpg" />
+    <Content Include="img\tour_list\tour_grid_15.jpg" />
+    <Content Include="img\tour_list\tour_grid_2.jpg" />
+    <Content Include="img\tour_list\tour_grid_3.jpg" />
+    <Content Include="img\tour_list\tour_grid_4.jpg" />
+    <Content Include="img\tour_list\tour_grid_5.jpg" />
+    <Content Include="img\tour_list\tour_grid_6.jpg" />
+    <Content Include="img\tour_list\tour_grid_7.jpg" />
+    <Content Include="img\tour_list\tour_grid_8.jpg" />
+    <Content Include="img\tour_list\tour_grid_9.jpg" />
+    <Content Include="img\weather_icon.png" />
+    <Content Include="img\weather_icon_rain.png" />
+    <Content Include="img\weather_icon_rain_blue.png" />
+    <Content Include="img\weather_icon_small.png" />
+    <Content Include="img\weather_icon_small_blue.png" />
+    <Content Include="js\all.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\DateTimePicker.min.js" />
+    <Content Include="js\idangerous.swiper.min.js" />
+    <Content Include="js\input_qty.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.circliful.min.js" />
+    <Content Include="js\jquery.classycountdown.min.js" />
+    <Content Include="js\jquery.countTo.js" />
+    <Content Include="js\jquery.knob.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.mousewheel.min.js" />
+    <Content Include="js\jquery.throttle.js" />
+    <Content Include="js\jquery.viewportchecker.min.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\modernizr_tables.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\tables_func.js" />
+    <Content Include="layerslider\css\blank.gif" />
+    <Content Include="layerslider\css\layerslider.css" />
+    <Content Include="layerslider\js\greensock.js" />
+    <Content Include="layerslider\js\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="layerslider\js\layerslider.transitions.js" />
+    <Content Include="officebooking.aspx" />
+    <Content Include="officerental.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Home.master" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="fullcalendar-3.9.0\demos\json\events.json" />
+    <Content Include="admin_section\vendor\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="admin_section\vendor\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="admin_section\vendor\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="admin_section\vendor\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="admin_section\vendor\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="codebase\sources\dhtmlxscheduler.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_active_links.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_agenda_view.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_all_timed.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_collision.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_container_autoresize.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_cookie.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_csp.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_editors.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_expand.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_html_templates.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_key_nav.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_layer.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_limit.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_map_view.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_minical.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_monthheight.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multiselect.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multisource.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_mvc.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_offline.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_outerdrag.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_pdf.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_quick_info.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_readonly.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_recurring.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_serialize.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_tooltip.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_url.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_wp.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_year_view.js.map" />
+    <Content Include="codebase\sources\less\dhtmlxscheduler.less" />
+    <Content Include="codebase\sources\less\dhtmlxscheduler_contrast_black.less" />
+    <Content Include="codebase\sources\less\dhtmlxscheduler_contrast_white.less" />
+    <Content Include="codebase\sources\less\dhtmlxscheduler_flat.less" />
+    <Content Include="codebase\sources\less\dhtmlxscheduler_material.less" />
+    <Content Include="codebase\sources\less\dhtmlxscheduler_terrace.less" />
+    <Content Include="codebase\sources\less\package.json" />
+    <Content Include="codebase\sources\less\skins\basic\clear.less" />
+    <Content Include="codebase\sources\less\skins\basic\ext.less" />
+    <Content Include="codebase\sources\less\skins\basic\index.less" />
+    <Content Include="codebase\sources\less\skins\basic\layout.less" />
+    <Content Include="codebase\sources\less\skins\basic\lightbox.less" />
+    <Content Include="codebase\sources\less\skins\basic\message_default.less" />
+    <Content Include="codebase\sources\less\skins\basic\note.less" />
+    <Content Include="codebase\sources\less\skins\basic\recurring.less" />
+    <Content Include="codebase\sources\less\skins\basic\skin.less" />
+    <Content Include="codebase\sources\less\skins\basic\suite.less" />
+    <Content Include="codebase\sources\less\skins\contrast_black\add_styles.less" />
+    <Content Include="codebase\sources\less\skins\contrast_black\index.less" />
+    <Content Include="codebase\sources\less\skins\contrast_black\skin.less" />
+    <Content Include="codebase\sources\less\skins\contrast_white\dhx_skin_contrast_white.less" />
+    <Content Include="codebase\sources\less\skins\contrast_white\index.less" />
+    <Content Include="codebase\sources\less\skins\flat\add_styles.less" />
+    <Content Include="codebase\sources\less\skins\flat\index.less" />
+    <Content Include="codebase\sources\less\skins\flat\skin.less" />
+    <Content Include="codebase\sources\less\skins\material\add_styles.less" />
+    <Content Include="codebase\sources\less\skins\material\index.less" />
+    <Content Include="codebase\sources\less\skins\material\skin.less" />
+    <Content Include="codebase\sources\less\skins\terrace\add_styles.less" />
+    <Content Include="codebase\sources\less\skins\terrace\index.less" />
+    <Content Include="codebase\sources\less\skins\terrace\skin.less" />
+    <Content Include="codebase\sources\locale\locale_ar.js.map" />
+    <Content Include="codebase\sources\locale\locale_be.js.map" />
+    <Content Include="codebase\sources\locale\locale_ca.js.map" />
+    <Content Include="codebase\sources\locale\locale_cn.js.map" />
+    <Content Include="codebase\sources\locale\locale_cs.js.map" />
+    <Content Include="codebase\sources\locale\locale_da.js.map" />
+    <Content Include="codebase\sources\locale\locale_de.js.map" />
+    <Content Include="codebase\sources\locale\locale_el.js.map" />
+    <Content Include="codebase\sources\locale\locale_en.js.map" />
+    <Content Include="codebase\sources\locale\locale_es.js.map" />
+    <Content Include="codebase\sources\locale\locale_fi.js.map" />
+    <Content Include="codebase\sources\locale\locale_fr.js.map" />
+    <Content Include="codebase\sources\locale\locale_he.js.map" />
+    <Content Include="codebase\sources\locale\locale_hu.js.map" />
+    <Content Include="codebase\sources\locale\locale_id.js.map" />
+    <Content Include="codebase\sources\locale\locale_it.js.map" />
+    <Content Include="codebase\sources\locale\locale_jp.js.map" />
+    <Content Include="codebase\sources\locale\locale_nb.js.map" />
+    <Content Include="codebase\sources\locale\locale_nl.js.map" />
+    <Content Include="codebase\sources\locale\locale_no.js.map" />
+    <Content Include="codebase\sources\locale\locale_pl.js.map" />
+    <Content Include="codebase\sources\locale\locale_pt.js.map" />
+    <Content Include="codebase\sources\locale\locale_ro.js.map" />
+    <Content Include="codebase\sources\locale\locale_ru.js.map" />
+    <Content Include="codebase\sources\locale\locale_si.js.map" />
+    <Content Include="codebase\sources\locale\locale_sk.js.map" />
+    <Content Include="codebase\sources\locale\locale_sv.js.map" />
+    <Content Include="codebase\sources\locale\locale_tr.js.map" />
+    <Content Include="codebase\sources\locale\locale_ua.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_be.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_cn.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_cs.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_da.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_de.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_el.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_en.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_es.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_fi.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_fr.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_he.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_it.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_nb.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_nl.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_pl.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_pt.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_ro.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_ru.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_sk.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_sv.js.map" />
+    <Content Include="codebase\sources\locale\recurring\locale_recurring_ua.js.map" />
+    <Content Include="boardroombooking.aspx" />
+    <None Include="Service References\GrantServiceRef\26onGrantService.disco" />
+    <None Include="Service References\GrantServiceRef\26onGrantService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrantServiceRef\26onGrantService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrantServiceRef\configuration91.svcinfo" />
+    <None Include="Service References\GrantServiceRef\configuration.svcinfo" />
+    <None Include="Service References\GrantServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="thinktankbooking.aspx" />
+    <Content Include="thinktankrental.aspx" />
+    <Content Include="verifyclient.aspx" />
+    <None Include="Service References\GrantServiceRef\26onGrantService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\GrantServiceRef\_26onGrant.GrantServiceRef.leeseeAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GrantServiceRef\_26onGrantService.wsdl" />
+    <Content Include="video\video.ogv" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="video\video.mp4" />
+    <Content Include="video\video.webm" />
+    <Content Include="virtualoffice.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="26onGrantService.svc.cs">
+      <DependentUpon>26onGrantService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="boardroomrental.aspx.cs">
+      <DependentUpon>boardroomrental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="boardroomrental.aspx.designer.cs">
+      <DependentUpon>boardroomrental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entities\Boardroom.cs" />
+    <Compile Include="entities\cart.cs" />
+    <Compile Include="entities\ThinkTank.cs" />
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="I26onGrantService.cs" />
+    <Compile Include="Home.master.cs">
+      <DependentUpon>Home.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.master.designer.cs">
+      <DependentUpon>Home.master</DependentUpon>
+    </Compile>
+    <Compile Include="entities\Office.cs" />
+    <Compile Include="officebooking.aspx.cs">
+      <DependentUpon>officebooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officebooking.aspx.designer.cs">
+      <DependentUpon>officebooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officerental.aspx.cs">
+      <DependentUpon>officerental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officerental.aspx.designer.cs">
+      <DependentUpon>officerental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\GrantServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="thinktankbooking.aspx.cs">
+      <DependentUpon>thinktankbooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thinktankbooking.aspx.designer.cs">
+      <DependentUpon>thinktankbooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thinktankrental.aspx.cs">
+      <DependentUpon>thinktankrental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thinktankrental.aspx.designer.cs">
+      <DependentUpon>thinktankrental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifyclient.aspx.cs">
+      <DependentUpon>verifyclient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifyclient.aspx.designer.cs">
+      <DependentUpon>verifyclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="virtualoffice.aspx.cs">
+      <DependentUpon>virtualoffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="virtualoffice.aspx.designer.cs">
+      <DependentUpon>virtualoffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entities\VirtualOffice.cs" />
+    <Compile Include="boardroombooking.aspx.cs">
+      <DependentUpon>boardroombooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="boardroombooking.aspx.designer.cs">
+      <DependentUpon>boardroombooking.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GrantServiceRef\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56398</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56398/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

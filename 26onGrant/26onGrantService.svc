@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="_26onGrant._26onGrantService" CodeBehind="26onGrantService.svc.cs" %>

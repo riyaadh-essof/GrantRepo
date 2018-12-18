@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed895a52-12b5-4a59-af8b-592fb387af8a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56398/26onGrantService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="26onGrantService.disco" MetadataType="Disco" ID="514381b4-45fa-47bf-8413-6f4f1812d7b1" SourceId="1" SourceUrl="http://localhost:56398/26onGrantService.svc?disco" />
+    <MetadataFile FileName="26onGrantService1.xsd" MetadataType="Schema" ID="0d8f7554-632c-4f28-94ef-ab5d53123849" SourceId="1" SourceUrl="http://localhost:56398/26onGrantService.svc?xsd=xsd1" />
+    <MetadataFile FileName="26onGrantService.xsd" MetadataType="Schema" ID="6125227f-fbb8-4795-b8d1-f95a1bb952d0" SourceId="1" SourceUrl="http://localhost:56398/26onGrantService.svc?xsd=xsd0" />
+    <MetadataFile FileName="26onGrantService2.xsd" MetadataType="Schema" ID="35de9c8f-087d-4850-bd8f-fe32a5239363" SourceId="1" SourceUrl="http://localhost:56398/26onGrantService.svc?xsd=xsd2" />
+    <MetadataFile FileName="_26onGrantService.wsdl" MetadataType="Wsdl" ID="163be7fb-0ff6-4847-8ea7-186b8f5b6300" SourceId="1" SourceUrl="http://localhost:56398/26onGrantService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

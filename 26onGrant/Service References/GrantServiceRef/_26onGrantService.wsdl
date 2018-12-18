@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="_26onGrantService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56398/26onGrantService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56398/26onGrantService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56398/26onGrantService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="I26onGrantService_registerLesee_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerLesee" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_registerLesee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerLeseeResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_verifyEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:verifyEmail" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_verifyEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verifyEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_leeseeAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:leeseeAuth" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_leeseeAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:leeseeAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_checkUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkUser" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_checkUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOffice" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getOfficeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOfficeID" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getOfficeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOfficeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_checkOfficeAvailibility_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkOfficeAvailibility" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_checkOfficeAvailibility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkOfficeAvailibilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:bookOffice" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bookOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookVirtualOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:bookVirtualOffice" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookVirtualOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bookVirtualOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getBoardroom_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBoardroom" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getBoardroom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBoardroomResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getThinkTank_InputMessage">
+    <wsdl:part name="parameters" element="tns:getThinkTank" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_getThinkTank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getThinkTankResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:bookTT" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bookTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookBoardroom_InputMessage">
+    <wsdl:part name="parameters" element="tns:bookBoardroom" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_bookBoardroom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bookBoardroomResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_officeType_InputMessage">
+    <wsdl:part name="parameters" element="tns:officeType" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_officeType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:officeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_allOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:allOffice" />
+  </wsdl:message>
+  <wsdl:message name="I26onGrantService_allOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:allOfficeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="I26onGrantService">
+    <wsdl:operation name="registerLesee">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/registerLesee" message="tns:I26onGrantService_registerLesee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/registerLeseeResponse" message="tns:I26onGrantService_registerLesee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/verifyEmail" message="tns:I26onGrantService_verifyEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/verifyEmailResponse" message="tns:I26onGrantService_verifyEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="leeseeAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/leeseeAuth" message="tns:I26onGrantService_leeseeAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/leeseeAuthResponse" message="tns:I26onGrantService_leeseeAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/checkUser" message="tns:I26onGrantService_checkUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/checkUserResponse" message="tns:I26onGrantService_checkUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/getOffice" message="tns:I26onGrantService_getOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/getOfficeResponse" message="tns:I26onGrantService_getOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOfficeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/getOfficeID" message="tns:I26onGrantService_getOfficeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/getOfficeIDResponse" message="tns:I26onGrantService_getOfficeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkOfficeAvailibility">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/checkOfficeAvailibility" message="tns:I26onGrantService_checkOfficeAvailibility_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/checkOfficeAvailibilityResponse" message="tns:I26onGrantService_checkOfficeAvailibility_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bookOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/bookOffice" message="tns:I26onGrantService_bookOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/bookOfficeResponse" message="tns:I26onGrantService_bookOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bookVirtualOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/bookVirtualOffice" message="tns:I26onGrantService_bookVirtualOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/bookVirtualOfficeResponse" message="tns:I26onGrantService_bookVirtualOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBoardroom">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/getBoardroom" message="tns:I26onGrantService_getBoardroom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/getBoardroomResponse" message="tns:I26onGrantService_getBoardroom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getThinkTank">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/getThinkTank" message="tns:I26onGrantService_getThinkTank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/getThinkTankResponse" message="tns:I26onGrantService_getThinkTank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bookTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/bookTT" message="tns:I26onGrantService_bookTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/bookTTResponse" message="tns:I26onGrantService_bookTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bookBoardroom">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/bookBoardroom" message="tns:I26onGrantService_bookBoardroom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/bookBoardroomResponse" message="tns:I26onGrantService_bookBoardroom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="officeType">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/officeType" message="tns:I26onGrantService_officeType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/officeTypeResponse" message="tns:I26onGrantService_officeType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="allOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/I26onGrantService/allOffice" message="tns:I26onGrantService_allOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I26onGrantService/allOfficeResponse" message="tns:I26onGrantService_allOffice_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_I26onGrantService" type="tns:I26onGrantService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registerLesee">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/registerLesee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyEmail">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/verifyEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leeseeAuth">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/leeseeAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/checkUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOffice">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/getOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOfficeID">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/getOfficeID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkOfficeAvailibility">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/checkOfficeAvailibility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookOffice">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/bookOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookVirtualOffice">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/bookVirtualOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBoardroom">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/getBoardroom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThinkTank">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/getThinkTank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookTT">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/bookTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookBoardroom">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/bookBoardroom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="officeType">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/officeType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allOffice">
+      <soap:operation soapAction="http://tempuri.org/I26onGrantService/allOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="_26onGrantService">
+    <wsdl:port name="BasicHttpBinding_I26onGrantService" binding="tns:BasicHttpBinding_I26onGrantService">
+      <soap:address location="http://localhost:56398/26onGrantService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
